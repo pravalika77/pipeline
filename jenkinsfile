@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage("Creating file"){
+            steps{
+                sh "touch file1.txt"
+                sh "mkdir folder1"
+                sh "pwd"
+            }
+        }
+        stage("multiple commands creating  "){
+            steps{
+                sh '''
+                touch aws
+                mkdir folder2
+                cal 0002
+                whoami
+                who
+                uname
+                '''
+            }
+        }
+    }
+    
+}
